@@ -12,7 +12,8 @@ namespace Task1
         {
             RightName();
             PrintNumber();
-
+            PrintString();
+            Console.ReadKey();
         }
 
         public static void RightName()
@@ -30,6 +31,18 @@ namespace Task1
             const decimal Eyler = 2.71828182459054m;
 
             Console.WriteLine($"PI: {PI}, Eyler: {Eyler}");
+        }
+
+        public static void PrintString()
+        {
+            String str1="\nмоя строка 1";
+            String str2= "\nмоя строка 2";
+            String str3= "\nмоя строка 3";
+
+            Console.WriteLine(str1);
+            Console.WriteLine(str2);
+            Console.WriteLine(str3);
+
         }
 
     }
