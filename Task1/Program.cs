@@ -11,6 +11,7 @@ namespace Task1
         static void Main(string[] args)
         {
             RightName();
+            PrintNumber();
 
         }
 
@@ -23,5 +24,13 @@ namespace Task1
             string myVariable;
         }
 
+        public static void PrintNumber()
+        {
+            const decimal PI = 3.141592653m;
+            const decimal Eyler = 2.71828182459054m;
+
+            Console.WriteLine($"PI: {PI}, Eyler: {Eyler}");
         }
+
+    }
 }
