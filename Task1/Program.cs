@@ -10,7 +10,18 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            RightName();
+
         }
-    }
+
+        public static void RightName()
+        {
+            string uberflu;
+            string _identifier;
+            string \u006fidentifier;
+            string myVar;
+            string myVariable;
+        }
+
+        }
 }
