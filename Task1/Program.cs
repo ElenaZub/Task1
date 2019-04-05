@@ -13,6 +13,7 @@ namespace Task1
             Task1();
             Task2();
             Task3();
+            Task4();
         }
 
         static public void Task1()
@@ -36,6 +37,17 @@ namespace Task1
             v1 = 'k';
             Console.WriteLine(v1);
         }
+
+        static public void Task4()
+        {
+            Console.WriteLine("Введите длину стороны квадрата:");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int P;
+            P = 4 * x;
+            Console.WriteLine("P = {0}", P);
+        }
+
+
 
 
 
