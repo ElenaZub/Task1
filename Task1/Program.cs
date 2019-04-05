@@ -18,7 +18,6 @@ namespace Task1
             Task6(15);
             Task7();
             Task8();
-
         }
 
         static public void Task1()
@@ -28,11 +27,10 @@ namespace Task1
         }
 
         static public void Task2()
-        {
-            string str1;
+        {     
             Console.WriteLine("Ваше имя?");
             str1 = Console.ReadLine();
-            string str2 = "Привет " + str1;
+            string str1 = "Привет " + str1;
             Console.WriteLine(str2);
         }
 
@@ -57,15 +55,11 @@ namespace Task1
             decimal S1;
             decimal S2;
             decimal S3;
-
             const decimal PI = 3.14m;
-
             S1 = PI * R1 * R1;
             S2 = PI * R2 * R2;
             S3 = S1 - S2;
-
             Console.WriteLine("S1 = {0}, S2 = {1}, S3 = {2}", S1, S2, S3);
-
         }
 
         static public void Task6(int number)
@@ -97,15 +91,11 @@ namespace Task1
         public static void Task9_1(int a, int b)
         {
             int c;
-
             Console.WriteLine("До: а = {0}, b = {1} ", a, b);
-
             c = a;
             a = b;
             b = c;
-
             Console.WriteLine("После: а = {0}, b = {1} ", a, b);
-
         }
 
         public static void Task9_2(int a, int b)
@@ -116,9 +106,5 @@ namespace Task1
             a = a - b;
             Console.WriteLine("После: а = {0}, b = {1} ", a, b);
         }
-
-
-
-
     }
 }
