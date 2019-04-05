@@ -12,6 +12,7 @@ namespace Task1
         {
             Task1();
             Task2();
+            Task3();
         }
 
         static public void Task1()
@@ -28,5 +29,17 @@ namespace Task1
             string str2 = "Привет " + str1;
             Console.WriteLine(str2);
         }
+
+        static public void Task3()
+        {
+            var v1 = 'v';
+            v1 = 'k';
+            Console.WriteLine(v1);
+        }
+
+
+
+
+
     }
 }
