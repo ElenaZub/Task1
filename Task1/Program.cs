@@ -16,7 +16,8 @@ namespace Task1
             Task4();
             Task5(3, 1);
             Task6(15);
-            Task7()
+            Task7();
+            Task8();
 
         }
 
@@ -85,7 +86,13 @@ namespace Task1
             Console.WriteLine("{0} + {1} = {2}", num1, num2, sum);
         }
 
-
+        public static void Task8()
+        {
+            long a = 15;
+            long b = 456768586;
+            byte c = (byte)(a + b);
+            Console.WriteLine("{0} + {1} = {2}", a, b, c);
+        }
 
 
 
