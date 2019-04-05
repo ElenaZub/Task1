@@ -29,7 +29,6 @@ namespace Task1
         {
             const decimal PI = 3.141592653m;
             const decimal Eyler = 2.71828182459054m;
-
             Console.WriteLine($"PI: {PI}, Eyler: {Eyler}");
         }
 
@@ -38,12 +37,9 @@ namespace Task1
             String str1="\nмоя строка 1";
             String str2= "\nмоя строка 2";
             String str3= "\nмоя строка 3";
-
             Console.WriteLine(str1);
             Console.WriteLine(str2);
             Console.WriteLine(str3);
-
         }
-
     }
 }
