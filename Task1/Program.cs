@@ -14,6 +14,7 @@ namespace Task1
             Task2();
             Task3();
             Task4();
+            Task5(3, 1);
         }
 
         static public void Task1()
@@ -45,6 +46,22 @@ namespace Task1
             int P;
             P = 4 * x;
             Console.WriteLine("P = {0}", P);
+        }
+
+        static public void Task5(decimal R1, decimal R2)
+        {
+            decimal S1;
+            decimal S2;
+            decimal S3;
+
+            const decimal PI = 3.14m;
+
+            S1 = PI * R1 * R1;
+            S2 = PI * R2 * R2;
+            S3 = S1 - S2;
+
+            Console.WriteLine("S1 = {0}, S2 = {1}, S3 = {2}", S1, S2, S3);
+
         }
 
 
