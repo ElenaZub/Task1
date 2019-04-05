@@ -94,6 +94,29 @@ namespace Task1
             Console.WriteLine("{0} + {1} = {2}", a, b, c);
         }
 
+        public static void Task9_1(int a, int b)
+        {
+            int c;
+
+            Console.WriteLine("До: а = {0}, b = {1} ", a, b);
+
+            c = a;
+            a = b;
+            b = c;
+
+            Console.WriteLine("После: а = {0}, b = {1} ", a, b);
+
+        }
+
+        public static void Task9_2(int a, int b)
+        {
+            Console.WriteLine("До: а = {0}, b = {1} ", a, b);
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            Console.WriteLine("После: а = {0}, b = {1} ", a, b);
+        }
+
 
 
 
