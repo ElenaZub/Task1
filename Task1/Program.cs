@@ -16,6 +16,7 @@ namespace Task1
             Task4();
             Task5(3, 1);
             Task6(15);
+            Task7()
 
         }
 
@@ -76,7 +77,13 @@ namespace Task1
             Console.WriteLine("Единицы {0}", numeral2);
         }
 
-
+        public static void Task7()
+        {
+            int num1 = 5;
+            int num2 = 199999;
+            long sum = num1 + num2;
+            Console.WriteLine("{0} + {1} = {2}", num1, num2, sum);
+        }
 
 
 
