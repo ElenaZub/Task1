@@ -15,6 +15,8 @@ namespace Task1
             Task3();
             Task4();
             Task5(3, 1);
+            Task6(15);
+
         }
 
         static public void Task1()
@@ -63,6 +65,17 @@ namespace Task1
             Console.WriteLine("S1 = {0}, S2 = {1}, S3 = {2}", S1, S2, S3);
 
         }
+
+        static public void Task6(int number)
+        {
+            int numeral1;
+            int numeral2;
+            numeral1 = number / 10;
+            numeral2 = number % 10;
+            Console.WriteLine("Десятки {0}", numeral1);
+            Console.WriteLine("Единицы {0}", numeral2);
+        }
+
 
 
 
