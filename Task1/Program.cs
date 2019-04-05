@@ -10,7 +10,13 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            Task1();
+        }
+
+        static public void Task1()
+        {
+            int x1 = 6;
+            Console.WriteLine(x1);
         }
     }
 }
