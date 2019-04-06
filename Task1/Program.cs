@@ -29,8 +29,8 @@ namespace Task1
         static public void Task2()
         {     
             Console.WriteLine("Ваше имя?");
-            str1 = Console.ReadLine();
-            string str1 = "Привет " + str1;
+            string str1 = Console.ReadLine();
+            string str2 = "Привет " + str1;
             Console.WriteLine(str2);
         }
 
