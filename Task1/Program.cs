@@ -16,7 +16,8 @@ namespace Task1
             //Calculation();
             //Calculator();
             //RangeOfNumber();
-            Translator();
+            //Translator();
+            Premium();
             Console.ReadKey();
         }
 
@@ -156,6 +157,39 @@ namespace Task1
                     Console.WriteLine("Undefined word");
                     break;
             }
+        }
+
+        public static void Premium()
+        {
+            Console.WriteLine(" Enter your salery:");
+            int salery = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(" Enter your work experience");
+            int workExperience = Convert.ToInt32(Console.ReadLine());
+
+            if (workExperience <= 5)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery*0.1}");
+            }
+            else if (5 < workExperience && workExperience <= 10)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.15}");
+            }
+            else if (5 <= workExperience && workExperience < 10)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.25}");
+            }
+            else if (10 <= workExperience && workExperience < 15)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.35}");
+            }
+            else if (15 <= workExperience && workExperience < 20)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.45}");
+            }
+            else if (25 <= workExperience && workExperience > 25)
+            {
+                Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.50}");
+            }        
         }
     }
 }
