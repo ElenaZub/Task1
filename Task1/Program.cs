@@ -15,7 +15,8 @@ namespace Task1
             //IsOdd(135);
             //Calculation();
             //Calculator();
-            RangeOfNumber();
+            //RangeOfNumber();
+            Translator();
             Console.ReadKey();
         }
 
@@ -112,6 +113,49 @@ namespace Task1
             } 
             if (0 > number || number > 100)
                 Console.WriteLine("Number is not in range from 0 to 100");
+        }
+
+
+        public static void Translator()
+        {
+            Console.WriteLine("Enter the word (мороз, солнце, дождь, тучи, ветер, гроза, туман, снег, жара, облака ):");
+            string word = Console.ReadLine();
+            switch (word)
+            {
+                case "мороз":
+                    Console.WriteLine("frost");
+                    break;
+                case "солнце":
+                    Console.WriteLine("sun");
+                    break;
+                case "дождь":
+                    Console.WriteLine("rain");
+                    break;
+                case "тучи":
+                    Console.WriteLine("clouds");
+                    break;
+                case "ветер":
+                    Console.WriteLine("wind");
+                    break;
+                case "гроза":
+                    Console.WriteLine("thunderstorm");
+                    break;
+                case "туман":
+                    Console.WriteLine("fog");
+                    break;
+                case "снег":
+                    Console.WriteLine("snow");
+                    break;
+                case "жара":
+                    Console.WriteLine("heat");
+                    break;
+                case "облака":
+                    Console.WriteLine("clouds");
+                    break;
+                default:
+                    Console.WriteLine("Undefined word");
+                    break;
+            }
         }
     }
 }
