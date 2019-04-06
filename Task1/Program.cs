@@ -10,7 +10,14 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            
+             HourPassed(7400);
+             Console.ReadKey();
+        }
+
+        public static void HourPassed(int Seconds)
+        {
+            int Hours = Seconds / 3600;
+            Console.WriteLine($" in {Seconds} seconds is {Hours} hours");             
         }
     }
 }
