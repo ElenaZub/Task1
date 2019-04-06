@@ -13,7 +13,8 @@ namespace Task1
             //HourPassed(7400);
             //PlaceOfVariable(1, 4, 3);
             //IsOdd(135);
-            Calculation();
+            //Calculation();
+            Calculator();
             Console.ReadKey();
         }
 
@@ -55,6 +56,37 @@ namespace Task1
             z = x++ + y * 5;
             x = y - x++ * z;
             Console.WriteLine($"x ={x}, y={y}, z={z}");
+        }
+
+        public static void Calculator()
+        {
+            int operand1 = 5;
+            int operand2 = 2;
+            Console.WriteLine("Enter math operation:");
+            string sign=Console.ReadLine();
+            switch (sign)
+            {
+                case "+":
+                    Console.WriteLine($"{operand1} + {operand2} = {operand1+ operand2}");
+                    break;
+                case "-":
+                    Console.WriteLine($"{operand1} - {operand2} = {operand1 - operand2}");
+                    break;
+                case "*":
+                    Console.WriteLine($"{operand1} * {operand2} = {operand1 * operand2}");
+                    break;
+                case "/":
+                    if (operand2 == 0)
+                    {
+                        Console.WriteLine(" Division by zero is impossible");
+                    }
+                    else
+                        Console.WriteLine($"{operand1} / {operand2} = {((double)operand1 / operand2)}");
+                    break;
+                default:
+                        Console.WriteLine("Operation is undeclared");
+                    break;
+            }                
         }
     }
 }
