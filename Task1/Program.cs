@@ -10,14 +10,25 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-             HourPassed(7400);
-             Console.ReadKey();
+            HourPassed(7400);
+            PlaceOfVariable(1, 4, 3);
+            Console.ReadKey();
         }
 
-        public static void HourPassed(int Seconds)
+        public static void HourPassed(int seconds)
         {
-            int Hours = Seconds / 3600;
-            Console.WriteLine($" in {Seconds} seconds is {Hours} hours");             
+            int hours = seconds / 3600;
+            Console.WriteLine($" in {seconds} seconds is {hours} hours");      
+        }
+
+        public static void PlaceOfVariable(int a, int b, int c)
+        {
+            if (a < b && b < c)
+            {
+                Console.WriteLine("B is between A and C");
+            }
+            else
+                Console.WriteLine("B is not between A and C");
         }
     }
 }
