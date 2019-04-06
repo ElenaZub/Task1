@@ -17,7 +17,8 @@ namespace Task1
             //Calculator();
             //RangeOfNumber();
             //Translator();
-            Premium();
+            //Premium();
+            AditionalCalculator();
             Console.ReadKey();
         }
 
@@ -190,6 +191,81 @@ namespace Task1
             {
                 Console.WriteLine($" Work experience is {workExperience}, salery is {salery}, premie is {(double)salery * 0.50}");
             }        
+        }
+
+        public static void AditionalCalculator()
+        {
+          
+            bool isOpen = true;
+            while (isOpen == true)
+            {
+                int operand1 = 0;
+                int operand2 = 0;
+                bool isRightFirstNumber = false;
+                bool isRightSecondNumber = false;
+                bool isRightSign = false;
+
+                while (isRightFirstNumber == false)
+                {
+                    Console.WriteLine("Enter first number:");
+                    if (Int32.TryParse(Console.ReadLine(), out operand1))
+                    {
+                        isRightFirstNumber = true;
+                    }
+                }
+
+                while (isRightSecondNumber == false)
+                {
+                    Console.WriteLine("Enter second number:");
+                    if (Int32.TryParse(Console.ReadLine(), out operand2))
+                    {
+                        isRightSecondNumber = true;
+                    }
+                }
+
+                while (isRightSign == false)
+                {
+                    Console.WriteLine("Enter math operation:");
+                    string sign = Console.ReadLine();
+
+                    switch (sign)
+                    {
+                        case "+":
+                            Console.WriteLine($"{operand1} + {operand2} = {operand1 + operand2}");
+                            isRightSign = true;
+                            break;
+                        case "-":
+                            Console.WriteLine($"{operand1} - {operand2} = {operand1 - operand2}");
+                            isRightSign = true;
+                            break;
+                        case "*":
+                            isRightSign = true;
+                            Console.WriteLine($"{operand1} * {operand2} = {operand1 * operand2}");
+                            break;
+                        case "/":
+                            if (operand2 == 0)
+                            {
+                                Console.WriteLine(" Division by zero is impossible");
+                            }
+                            else
+                                isRightSign = true;
+                            Console.WriteLine($"{operand1} / {operand2} = {((double)operand1 / operand2)}");
+                            break;
+                        default:
+                            Console.WriteLine("Operation is undeclared");
+                            break;
+                    }
+
+                    Console.WriteLine("Do you want to end( Yes/No)?");
+                    if (Console.ReadLine()=="Yes")
+                    {
+                        isOpen = false;
+                    }else
+                        isOpen = true;
+                }
+            }
+            
+                      
         }
     }
 }
