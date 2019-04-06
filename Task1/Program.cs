@@ -12,7 +12,8 @@ namespace Task1
         {
             //HourPassed(7400);
             //PlaceOfVariable(1, 4, 3);
-            IsOdd(135);
+            //IsOdd(135);
+            Calculation();
             Console.ReadKey();
         }
 
@@ -41,6 +42,19 @@ namespace Task1
             }   
             else
                 Console.WriteLine(" Statement is false");
+        }
+
+        public static void Calculation()
+        {
+            int x = 10;
+            int y = 12;
+            int z = 3;
+            x += y - x++ * z;
+            z =--x - y * 5;
+            y /= x + 5 % z;
+            z = x++ + y * 5;
+            x = y - x++ * z;
+            Console.WriteLine($"x ={x}, y={y}, z={z}");
         }
     }
 }
