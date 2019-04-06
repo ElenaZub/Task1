@@ -10,8 +10,9 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            HourPassed(7400);
-            PlaceOfVariable(1, 4, 3);
+            //HourPassed(7400);
+            //PlaceOfVariable(1, 4, 3);
+            IsOdd(135);
             Console.ReadKey();
         }
 
@@ -29,6 +30,17 @@ namespace Task1
             }
             else
                 Console.WriteLine("B is not between A and C");
+        }
+
+        public static void IsOdd(int number)
+        {
+            int amountOfRank=Convert.ToString(number).Length;
+            if (number % 2 == 1 && amountOfRank==3)
+            {
+                Console.WriteLine($"{number} is odd and has {amountOfRank} rank");
+            }   
+            else
+                Console.WriteLine(" Statement is false");
         }
     }
 }
