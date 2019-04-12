@@ -18,7 +18,8 @@ namespace Task1
             //DaysOfRunning();
             //Square(30);
             //ReverseOfNumber();
-            PowOfNumber(5, 2);
+            //PowOfNumber(5, 2);
+            PropertyOfNumber();
             Console.ReadKey();
         }
    
@@ -137,6 +138,62 @@ namespace Task1
                 count++;
             }
             Console.WriteLine($"{number}^{n} = {pow}");
+        }
+
+        public static void PropertyOfNumber()
+        {
+            Console.WriteLine("Enter number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("1. Whether the entered number is positive or negative: ");
+            Console.WriteLine("2. Is it simple");
+            Console.WriteLine("3. Is it divided into 2, 5, 3, 6, 9 without a residue");
+            Console.WriteLine("Choose the action:");
+            int action = Convert.ToInt32(Console.ReadLine());
+            switch (action)
+            {
+                case 1:
+                    if (number < 0)
+                    {
+                        Console.WriteLine(" The number is negative.");
+                    }
+                    else
+                        Console.WriteLine(" The number is positive.");
+                    break;
+                case 2:
+                    int count = 1;
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        if (number % i == 0)
+                            count++;
+                    }
+                    if (count > 2)
+                    {
+                        Console.WriteLine(" The number is not simple.");
+                    }
+                    else
+                        Console.WriteLine(" The number is simple.");
+
+                    break;
+                case 3:
+                    string deviding = "";
+                    if (number % 2 == 0)
+                        deviding = deviding + " 2 ";
+                    if (number % 5 == 0)
+                        deviding = deviding + " 5 ";
+                    if (number % 3 == 0)
+                        deviding = deviding + " 3 ";
+                    if (number % 6 == 0)
+                        deviding = deviding + " 6 ";
+                    if (number % 9 == 0)
+                        deviding = deviding + " 9 ";
+                    //придумать что-то с запятыми!
+                    Console.WriteLine(" The number is divided without remainder by " + deviding);
+                    break;
+                default:
+                    Console.WriteLine(" Wrong number of menu");
+                    break;
+            }
+
         }
     }
 }
