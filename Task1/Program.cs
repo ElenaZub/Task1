@@ -15,7 +15,8 @@ namespace Task1
             //OddValuesBetweenNumbers(5, 12);
             //CounOfEvenInNumber(34566510);
             //MeanOfNumbers();
-            DaysOfRunning();
+            //DaysOfRunning();
+            Square(30);
             Console.ReadKey();
         }
    
@@ -97,5 +98,18 @@ namespace Task1
             }
             Console.WriteLine($"Skier ran {sum} for {days} days");
         }
+
+        public static void Square(int N)
+        {
+            Console.WriteLine($"Squares of numbers less than {N} is: ");
+            int i = 1;
+            while (i*i<N)
+            {
+                Console.Write(i*i +" ");
+                i++;
+            }
+
+        }
+            
     }
 }
