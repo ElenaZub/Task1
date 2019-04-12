@@ -14,7 +14,8 @@ namespace Task1
             //SumBetweenNumbers(3, 6);
             //OddValuesBetweenNumbers(5, 12);
             //CounOfEvenInNumber(34566510);
-            MeanOfNumbers();
+            //MeanOfNumbers();
+            DaysOfRunning();
             Console.ReadKey();
         }
    
@@ -81,6 +82,20 @@ namespace Task1
             }
             double average = (double)sum / count;
             Console.WriteLine($"Average of numbers between {number1} and {number2} ( inclusive) is {average}");
+        }
+
+        public static void DaysOfRunning()
+        {
+            double distance = 10;
+            double sum = 10;
+            int days = 1;
+            while (sum <= 100)
+            {
+                distance = distance * 1.1;
+                sum = sum + distance;
+                days++;
+            }
+            Console.WriteLine($"Skier ran {sum} for {days} days");
         }
     }
 }
