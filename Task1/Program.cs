@@ -13,7 +13,8 @@ namespace Task1
             //Factorial(5);
             //SumBetweenNumbers(3, 6);
             //OddValuesBetweenNumbers(5, 12);
-            CounOfEvenInNumber(34566510);
+            //CounOfEvenInNumber(34566510);
+            MeanOfNumbers();
             Console.ReadKey();
         }
    
@@ -64,6 +65,22 @@ namespace Task1
                 a = a / 10;
             }
             Console.WriteLine($" The number of even digits in the number {b} is {count}");
+        }
+
+        public static void MeanOfNumbers()
+        {
+            Console.WriteLine("Enter two numbers A and B( A<=B)");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            int number2 = Convert.ToInt32(Console.ReadLine());
+            int sum = 0;
+            int count = 0;
+            for (int i = number1; i <= number2; i++)
+            {
+                sum += i;
+                count++;
+            }
+            double average = (double)sum / count;
+            Console.WriteLine($"Average of numbers between {number1} and {number2} ( inclusive) is {average}");
         }
     }
 }
