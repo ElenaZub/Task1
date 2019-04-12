@@ -20,7 +20,9 @@ namespace Task1
             //ReverseOfNumber();
             //PowOfNumber(5, 2);
             //PropertyOfNumber();
-            Multiplication(-5, -3);
+            //Multiplication(-5, -3);
+            //DeletDigit();
+            MaxDigit(-16759);
             Console.ReadKey();
         }
    
@@ -229,5 +231,47 @@ namespace Task1
             }
             Console.WriteLine(multiplication);
         }
+
+        public static void DeletDigit()
+        {
+            Console.WriteLine("Enter the number:");
+            int number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the digit:");
+            int digit = Convert.ToInt32(Console.ReadLine());
+            int newNumber = 0;
+            int rank = 1;
+            while (number > 0)
+            {
+                int rest = number % 10;
+                number = number / 10;
+                if (rest == digit)
+                    continue;             
+                newNumber = newNumber + rest * rank;
+                rank = rank * 10;
+            }
+            Console.WriteLine(newNumber);       
+        }
+
+        public static void MaxDigit(int number)
+        {
+            if (number < 0)
+            {
+                number = -number;
+            }
+            int max = number % 10;
+            int rest = 0;
+            while (number > 0)
+            {
+                rest = number % 10;
+                if (max < rest)
+                {
+                    max = rest;
+                }
+                number = number / 10;
+            }
+            Console.WriteLine(max);
+        }
     }
 }
+
+
