@@ -16,7 +16,8 @@ namespace Task1
             //CounOfEvenInNumber(34566510);
             //MeanOfNumbers();
             //DaysOfRunning();
-            Square(30);
+            //Square(30);
+            ReverseOfNumber();
             Console.ReadKey();
         }
    
@@ -108,8 +109,21 @@ namespace Task1
                 Console.Write(i*i +" ");
                 i++;
             }
-
         }
-            
+
+        public static void ReverseOfNumber()
+        {
+            int number = 13456;
+            int reverseNumber = 0;
+            int remainder = 0;
+            while (number > 0)
+            {
+                remainder = number % 10;
+                reverseNumber = reverseNumber * 10;
+                reverseNumber = reverseNumber + remainder;
+                number = number /10;
+            }
+            Console.WriteLine(reverseNumber);
+        }          
     }
 }
