@@ -17,7 +17,8 @@ namespace Task1
             //MeanOfNumbers();
             //DaysOfRunning();
             //Square(30);
-            ReverseOfNumber();
+            //ReverseOfNumber();
+            PowOfNumber(5, 2);
             Console.ReadKey();
         }
    
@@ -124,6 +125,18 @@ namespace Task1
                 number = number /10;
             }
             Console.WriteLine(reverseNumber);
-        }          
+        }
+
+        public static void PowOfNumber(int number, int n)
+        {
+            int count = 1;
+            int pow = number;
+            while (count < n)
+            {
+                pow = pow *number ;
+                count++;
+            }
+            Console.WriteLine($"{number}^{n} = {pow}");
+        }
     }
 }
