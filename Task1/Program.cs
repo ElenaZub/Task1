@@ -19,7 +19,8 @@ namespace Task1
             //Square(30);
             //ReverseOfNumber();
             //PowOfNumber(5, 2);
-            PropertyOfNumber();
+            //PropertyOfNumber();
+            Multiplication(-5, -3);
             Console.ReadKey();
         }
    
@@ -193,7 +194,40 @@ namespace Task1
                     Console.WriteLine(" Wrong number of menu");
                     break;
             }
+        }
 
+        public static void Multiplication(int number1, int number2)
+        {
+            int multiplication = 0;
+            if (number1 > 0 && number2 > 0)
+            {
+                for (int i = 0; i < number2; i++)
+                {
+                    multiplication = multiplication + number1;
+                }
+            }
+            else if (number1 < 0 && number2 > 0)
+            {
+                for (int i = 0; i < number2; i++)
+                {
+                    multiplication = multiplication + number1;
+                }
+            }
+            else if (number1 < 0 && number2 < 0)
+            {
+                for (int i = 0; i < (-number2); i++)
+                {
+                    multiplication = multiplication + (-number1);
+                }
+            }
+            else if (number1 > 0 && number2 < 0)
+            {
+                for (int i = 0; i < (-number2); i++)
+                {
+                    multiplication = multiplication + (-number1);
+                }
+            }
+            Console.WriteLine(multiplication);
         }
     }
 }
