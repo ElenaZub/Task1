@@ -11,8 +11,9 @@ namespace Task1
         static void Main(string[] args)
         {
             //Factorial(5);
-            SumBetweenNumbers(3, 6);
-            OddValuesBetweenNumbers(5, 12);
+            //SumBetweenNumbers(3, 6);
+            //OddValuesBetweenNumbers(5, 12);
+            CounOfEvenInNumber(34566510);
             Console.ReadKey();
         }
    
@@ -48,6 +49,21 @@ namespace Task1
                 }
             }
             Console.WriteLine($"Odd values between {number1} and {number2} is"+ odd);
+        }
+
+        public static void CounOfEvenInNumber(int a)
+        {
+            int b = a;
+            int count = 0;
+            while (a > 0)
+            {
+                if ((a % 10) % 2 == 0)
+                {
+                    count++;
+                }
+                a = a / 10;
+            }
+            Console.WriteLine($" The number of even digits in the number {b} is {count}");
         }
     }
 }
