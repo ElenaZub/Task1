@@ -10,7 +10,9 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Factorial(5);
+            //Factorial(5);
+            SumBetweenNumbers(3, 6);
+            OddValuesBetweenNumbers(5, 12);
             Console.ReadKey();
         }
    
@@ -25,5 +27,27 @@ namespace Task1
             Console.WriteLine($"Factorial = {factorial}");
         }
 
+        public static void SumBetweenNumbers(int number1, int number2)
+        {
+            int sum = 0;
+            for (int i = number1+1; i < number2; i++)
+            {
+                sum += i;
+            }
+            Console.WriteLine($"Sum of numbers between {number1} and {number2} = {sum}");
+        }
+
+        public static void OddValuesBetweenNumbers(int number1, int number2)
+        {
+            String odd = "";
+            for (int i = number1 + 1; i < number2; i++)
+            {
+                if (i % 2 == 1)
+                {
+                    odd = odd + " " + i;
+                }
+            }
+            Console.WriteLine($"Odd values between {number1} and {number2} is"+ odd);
+        }
     }
 }
