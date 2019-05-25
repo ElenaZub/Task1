@@ -12,7 +12,8 @@ namespace Task1
         {
             //UnpackArray();
             //CalculateTotalPrice();
-            PrintPerfectNumber();
+            //PrintPerfectNumber();
+            EncryptMessage();
 
             Console.ReadKey();
         }
@@ -112,6 +113,37 @@ namespace Task1
                 {
                     Console.WriteLine(i);
                 }
+            }
+        }
+
+        public static void EncryptMessage()
+        {
+            var encryptChars = new char[10] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+            var cipher = new char[11] { ';', '+', '/', '.', '^', '@', '"', '!', '%', '#', '$' };
+
+            Console.WriteLine("Enter message:");
+            string message = Console.ReadLine();
+
+            var encryptMessage = new char[message.Length];
+
+            for (int i = 0; i < message.Length; i++)
+            {
+                for (int j = 0; j < encryptChars.Length; j++)
+                {
+                    if (message[i] == encryptChars[j])
+                    {
+                        encryptMessage[i] = cipher[j];
+                        break;
+                    }
+                    else
+                        encryptMessage[i] = cipher[10];
+                }
+            }
+
+            Console.WriteLine("Encrypted message:");
+            foreach (var item in encryptMessage)
+            {
+                Console.Write(item);
             }
         }
     }
