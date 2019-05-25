@@ -11,7 +11,8 @@ namespace Task1
         static void Main(string[] args)
         {
             //UnpackArray();
-            CalculateTotalPrice();
+            //CalculateTotalPrice();
+            PrintPerfectNumber();
 
             Console.ReadKey();
         }
@@ -89,6 +90,29 @@ namespace Task1
             }
 
             Console.WriteLine($"Amount to pay is {sum} uah");
+        }
+
+        public static void PrintPerfectNumber()
+        {
+            Console.WriteLine("Perfect numbers in interval from 1 to 1000:");
+
+            for (int i = 1; i <= 1000; i++)
+            {
+                int sum = 0;
+
+                for (int j = 1; j < i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        sum += j;
+                    }
+                }
+
+                if (i == sum)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
     }
 }
