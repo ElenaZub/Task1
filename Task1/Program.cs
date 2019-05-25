@@ -10,7 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            UnpackArray();
+            //UnpackArray();
+            CalculateTotalPrice();
 
             Console.ReadKey();
         }
@@ -58,6 +59,36 @@ namespace Task1
                     }
                 }
             }
+        }
+
+        public static void CalculateTotalPrice()
+        {
+            string[] product = { "Pears", "Apples", "Cucumbers", "Tomatos", "Dill", "Parsley", "Chiсken", "Cheese", "Butter", "Milk" };
+            decimal[] price = { 40.50M, 31.20M, 21.80M, 35.00M, 150.00M, 145.00M, 200.00M, 400.00M, 81.40M, 53.35M };
+
+            for (int i = 0; i < product.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}) {product[i]} - {price[i]} uah");
+            }
+
+            Console.WriteLine("What you want to take? (Enter number of product or 0 to end calculation)");
+
+            decimal sum = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Product:");
+                int numberOfProduct = Int32.Parse(Console.ReadLine());
+                if (numberOfProduct == 0)
+                    break;
+
+                Console.WriteLine("Amount:");
+                decimal amountOfProduct = decimal.Parse(Console.ReadLine());
+
+                sum += price[numberOfProduct - 1] * amountOfProduct;
+            }
+
+            Console.WriteLine($"Amount to pay is {sum} uah");
         }
     }
 }
