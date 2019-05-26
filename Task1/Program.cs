@@ -15,7 +15,8 @@ namespace Task1
             //InsertString(EnterString(), 7);
             //DeleteSpace(EnterString());
             //PrintFirstLetter(EnterString());
-            PrintReverseOrder(EnterString());
+            //PrintReverseOrder(EnterString());
+            LengthOfWord(EnterString());
 
             Console.ReadKey();
         }
@@ -118,10 +119,28 @@ namespace Task1
 
             for (int i = array.Length-1; i >=0; i--)
             {
+
                 strReverse += array[i] + ' ';
             }
 
             Console.WriteLine($"Reverse: {strReverse}");
+        }
+
+        public static void LengthOfWord(string str)
+        {
+            string[] word = str.Split(' ');
+            int max = word[0].Length;
+            int min = word[0].Length;
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (max < word[i].Length)
+                    max = word[i].Length;
+                if(min > word[i].Length)
+                    min = word[i].Length;
+            }
+
+            Console.WriteLine($" Min length of word is {min}, max lenght of word is {max}");
         }
     }
 }
