@@ -10,7 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            DeleteDublicate(EnterString());
+            //DeleteDublicate(EnterString());
+            NumberOfSymbol(EnterString());
 
             Console.ReadKey();
         }
@@ -44,5 +45,23 @@ namespace Task1
 
             Console.WriteLine(res);
         }
+
+        public static void NumberOfSymbol(string str)
+        {
+            Console.WriteLine("Enter symbol to count numbers of dublicate:");
+            char symbol = char.Parse(Console.ReadLine());
+            int count = 0;
+
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (symbol == str[i])
+                {
+                    count++;
+                }
+            }
+
+            Console.WriteLine($"{symbol} dublicated {count} times");
+        }   
     }
 }
