@@ -11,7 +11,8 @@ namespace Task1
         static void Main(string[] args)
         {
             //ConverMessage(EnterMessage());
-            PrintError();
+            //PrintError();
+            CountOfVowels();
 
             Console.ReadKey();
         }
@@ -47,6 +48,26 @@ namespace Task1
             }
 
             Console.WriteLine($"The result is {error}/{str.Length}");
+        }
+
+        public static void CountOfVowels()
+        {
+            Console.WriteLine("Enter string:");
+            string str = Console.ReadLine();
+
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            int count = 0;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                for (int j = 0; j < vowels.Length; j++)
+                {
+                    if (str[i] == vowels[j])
+                        count += 1;
+                }
+            }
+
+            Console.WriteLine($"{str} - {count} vowels");
         }
     }
 }
