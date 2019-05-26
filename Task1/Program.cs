@@ -12,7 +12,8 @@ namespace Task1
         {
             //DeleteDublicate(EnterString());
             //NumberOfSymbol(EnterString());
-            InsertString(EnterString(), 7);
+            //InsertString(EnterString(), 7);
+            DeleteSpace(EnterString());
 
             Console.ReadKey();
         }
@@ -72,6 +73,28 @@ namespace Task1
             string firstPart = oldStr.Substring(0, position-1);
             string secondPart = oldStr.Substring(position - 1, oldStr.Length - position);
             string newStr = firstPart + strForInsert + secondPart;
+
+            Console.WriteLine(newStr);
+        }
+
+        public static void DeleteSpace(string str)
+        {
+            int position1=str.IndexOf('?');
+            int position2 = str.IndexOf('?',position1 + 1);
+            string newStr = string.Empty;
+
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (i < position1 || i > position2)
+                {
+                    newStr += str[i];
+                }
+                else
+                {
+                    if (str[i] != ' ')
+                        newStr += str[i];
+                } 
+            }
 
             Console.WriteLine(newStr);
         }
