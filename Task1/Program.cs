@@ -14,7 +14,8 @@ namespace Task1
             //NumberOfSymbol(EnterString());
             //InsertString(EnterString(), 7);
             //DeleteSpace(EnterString());
-            PrintFirstLetter(EnterString());
+            //PrintFirstLetter(EnterString());
+            PrintReverseOrder(EnterString());
 
             Console.ReadKey();
         }
@@ -108,6 +109,19 @@ namespace Task1
             string[] words = str.Split(' ');
 
             Console.WriteLine(words[position - 1].Substring(0,1)); 
+        }
+
+        public static void PrintReverseOrder(string str)
+        {
+            string[] array = str.Split(' ');
+            string strReverse = string.Empty;
+
+            for (int i = array.Length-1; i >=0; i--)
+            {
+                strReverse += array[i] + ' ';
+            }
+
+            Console.WriteLine($"Reverse: {strReverse}");
         }
     }
 }
