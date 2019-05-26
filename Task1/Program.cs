@@ -10,7 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            ConverMessage(EnterMessage());
+            //ConverMessage(EnterMessage());
+            PrintError();
 
             Console.ReadKey();
         }
@@ -31,6 +32,21 @@ namespace Task1
         {
             Console.WriteLine("Enter message:");
             return Console.ReadLine();
+        }
+
+        public static void PrintError()
+        {
+            Console.WriteLine("Enter string:");
+            string str = Console.ReadLine();
+
+            int error = 0;
+            for (int i = 0; i < str.Length; i++)
+            {
+                if (str[i] > 'm')
+                    error += 1;
+            }
+
+            Console.WriteLine($"The result is {error}/{str.Length}");
         }
     }
 }
