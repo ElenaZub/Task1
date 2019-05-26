@@ -16,7 +16,8 @@ namespace Task1
             //DeleteSpace(EnterString());
             //PrintFirstLetter(EnterString());
             //PrintReverseOrder(EnterString());
-            LengthOfWord(EnterString());
+            //LengthOfWord(EnterString());
+            DeleteExtraSpace(EnterString());
 
             Console.ReadKey();
         }
@@ -141,6 +142,20 @@ namespace Task1
             }
 
             Console.WriteLine($" Min length of word is {min}, max lenght of word is {max}");
+        }
+
+        public static void DeleteExtraSpace(string str)
+        {
+            string[] strArr = str.Split(' ');
+            string newStr = string.Empty;
+
+            foreach (var item in strArr)
+            {
+                if (item != string.Empty)
+                    newStr += item + ' ';                   
+            }
+
+            Console.WriteLine(newStr);
         }
     }
 }
