@@ -11,7 +11,8 @@ namespace Task1
         static void Main(string[] args)
         {
             //DeleteDublicate(EnterString());
-            NumberOfSymbol(EnterString());
+            //NumberOfSymbol(EnterString());
+            InsertString(EnterString(), 7);
 
             Console.ReadKey();
         }
@@ -52,7 +53,6 @@ namespace Task1
             char symbol = char.Parse(Console.ReadLine());
             int count = 0;
 
-
             for (int i = 0; i < str.Length; i++)
             {
                 if (symbol == str[i])
@@ -62,6 +62,18 @@ namespace Task1
             }
 
             Console.WriteLine($"{symbol} dublicated {count} times");
-        }   
+        }
+
+        public static void InsertString(string oldStr,int position)
+        {
+            Console.WriteLine("Enter string for pasting:");
+            string strForInsert = Console.ReadLine();
+
+            string firstPart = oldStr.Substring(0, position-1);
+            string secondPart = oldStr.Substring(position - 1, oldStr.Length - position);
+            string newStr = firstPart + strForInsert + secondPart;
+
+            Console.WriteLine(newStr);
+        }
     }
 }
