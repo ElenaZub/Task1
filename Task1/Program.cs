@@ -13,7 +13,8 @@ namespace Task1
             //DeleteDublicate(EnterString());
             //NumberOfSymbol(EnterString());
             //InsertString(EnterString(), 7);
-            DeleteSpace(EnterString());
+            //DeleteSpace(EnterString());
+            PrintFirstLetter(EnterString());
 
             Console.ReadKey();
         }
@@ -97,6 +98,16 @@ namespace Task1
             }
 
             Console.WriteLine(newStr);
+        }
+
+        public static void PrintFirstLetter(string str)
+        {
+            Console.WriteLine("Enter position of word:");
+            int position = Int32.Parse(Console.ReadLine());
+
+            string[] words = str.Split(' ');
+
+            Console.WriteLine(words[position - 1].Substring(0,1)); 
         }
     }
 }
