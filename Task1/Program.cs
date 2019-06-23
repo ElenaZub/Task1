@@ -10,7 +10,9 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            
+            new FolderInfo().Execute();
+
+            Console.ReadKey();
         }
     }
 }
