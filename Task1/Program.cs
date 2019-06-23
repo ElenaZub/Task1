@@ -11,7 +11,8 @@ namespace Task1
         static void Main(string[] args)
         {
             //new FolderInfo().Execute();
-            new TxtFile().Execute();
+            //new TxtFile().Execute();
+            new FileContent().Execute();
 
             Console.ReadKey();
         }
