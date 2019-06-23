@@ -10,7 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            new FolderInfo().Execute();
+            //new FolderInfo().Execute();
+            new TxtFile().Execute();
 
             Console.ReadKey();
         }
