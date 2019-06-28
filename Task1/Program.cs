@@ -9,10 +9,9 @@ namespace Task1
 
     public delegate double Calculate(double firstArgument, double secondArgument);
 
-
     public class Helper
     {
-        public void Execute(Calculate del)
+        public void Execute(Func<double, double, double> del)
         {
             double firstArgument = 10;
             double secondArgument = 20;
@@ -47,7 +46,7 @@ namespace Task1
     class Program
     {
         static void Main(string[] args)
-        {
+        {    
             Helper help = new Helper();
             Calculator calc = new Calculator();
 
