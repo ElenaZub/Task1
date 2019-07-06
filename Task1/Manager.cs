@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Manager
+    public class Manager
     {
         public Student GetStrudent(out string studentKey)
         {
@@ -45,6 +45,6 @@ namespace Task1
                 }
                 Console.WriteLine($"Amount of students is: {students.Count}");
             }
-        }
+        } 
     }
 }

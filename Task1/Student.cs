@@ -18,6 +18,8 @@ namespace Task1
 
         public string Faculty { get; set; }
 
+        private Queue<string> myTask;
+
         public Student()
         {
         }
@@ -29,11 +31,31 @@ namespace Task1
             this.Course = course;
             this.Group = group;
             this.Faculty = faculty;
+            this.myTask = new Queue<string>();
         }
 
         public override string ToString()
         {
             return $"Name: {this.FirstName} Surname: {this.LastName} Course: {this.Course} Group: {this.Group} Faculty: {this.Faculty}";
+        }
+        
+        public void AddTask(string taskName)
+        {
+            myTask.Enqueue(taskName);
+        }
+
+        public void CompliteTask()
+        {
+            var tmp = myTask.Dequeue();
+            Console.WriteLine($"\"{tmp}\" is done!");
+        }
+
+        public void PrintTask()
+        {
+            foreach (var item in myTask)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }

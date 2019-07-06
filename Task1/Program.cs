@@ -68,7 +68,38 @@ namespace Task1
 
                             if (done)
                             {
-                                Console.WriteLine(someStudent);
+                                bool exit = false;
+                                while (exit == false)
+                                {
+                                    Console.WriteLine(someStudent);
+                                    Console.WriteLine("1. Add task");
+                                    Console.WriteLine("2. Complite task");
+                                    Console.WriteLine("3. Print tasks");
+                                    Console.WriteLine("0. Back to all students");
+                                    Console.WriteLine("Enter number:");
+
+                                    int subOption = Int32.Parse(Console.ReadLine());
+                                    switch (subOption)
+                                    {
+                                        case 1:
+                                            Console.WriteLine("Enter task:");
+                                            string task = Console.ReadLine();
+                                            someStudent.AddTask(task);
+                                            break;
+                                        case 2:
+                                            someStudent.CompliteTask();
+                                            break;
+                                        case 3:
+                                            someStudent.PrintTask();
+                                            break;
+                                        case 0:
+                                            exit = true;
+                                            break;
+                                        default:
+                                            Console.WriteLine("You entered wrong number!");
+                                            break;
+                                    }
+                                }                               
                             }
                             else
                                 Console.WriteLine("Student is not exists!");
