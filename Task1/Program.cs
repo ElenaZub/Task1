@@ -10,14 +10,16 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            List<Student> students = new List<Student>();
+            Dictionary<string, Student> students = new Dictionary<string, Student>();
             Manager action = new Manager();
+            Student someStudent = new Student(); 
 
             while (true)
             {
                 Console.WriteLine("1. Add student");
                 Console.WriteLine("2. Remove student");
-                Console.WriteLine("3. Print students");
+                Console.WriteLine("3. Find student");
+                Console.WriteLine("4. Print students");
                 Console.WriteLine("Enter number of menu:");
 
                 int option = int.Parse(Console.ReadLine());
@@ -25,30 +27,54 @@ namespace Task1
                 switch (option)
                 {
                     case 1:
-                        students.Add(action.GetStrudent());
+                        string key = String.Empty;
+                        someStudent = action.GetStrudent(out key);
+                        students.Add(key, someStudent);
                         break;
                     case 2:
                         if (students.Count == 0)
                         {
-                            Console.WriteLine("List is empty!");
+                            Console.WriteLine("Dictionary is empty!");
                         }
                         else
                         {
                             while (true)
                             {
-                                Console.WriteLine("Enter number of student that you want to remove from list:");
-                                int number = Int32.Parse(Console.ReadLine());
-                                if (number > students.Count || number <= 0)
+                                Console.WriteLine("Enter name and surname of student that you want to remove from dictionary:");
+                                string keyString = Console.ReadLine();
+
+                                bool check = students.TryGetValue(keyString, out someStudent);
+                                if (check)
                                 {
-                                    Console.WriteLine("You enter wrong number!");
+                                    students.Remove(keyString);
                                 }
                                 else
-                                    students.Remove(students[number - 1]);
+                                    Console.WriteLine("There is no such key in dictionary");
                                 break;
                             }
                         }
                         break;
                     case 3:
+                        if (students.Count == 0)
+                        {
+                            Console.WriteLine("Dictionary is empty!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Enter name and surname of student that you want to find in dictionary:");
+                            string keyValue = Console.ReadLine();
+
+                            bool done = students.TryGetValue(keyValue, out someStudent);
+
+                            if (done)
+                            {
+                                Console.WriteLine(someStudent);
+                            }
+                            else
+                                Console.WriteLine("Student is not exists!");
+                        }
+                        break;
+                    case 4:
                         action.PrintStudents(students);
                         break;
                     default:
