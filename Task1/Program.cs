@@ -75,6 +75,9 @@ namespace Task1
                                     Console.WriteLine("1. Add task");
                                     Console.WriteLine("2. Complite task");
                                     Console.WriteLine("3. Print tasks");
+                                    Console.WriteLine("4. Take the book");
+                                    Console.WriteLine("5. Give back the book");
+                                    Console.WriteLine("6. Print the student books");
                                     Console.WriteLine("0. Back to all students");
                                     Console.WriteLine("Enter number:");
 
@@ -91,6 +94,17 @@ namespace Task1
                                             break;
                                         case 3:
                                             someStudent.PrintTask();
+                                            break;
+                                        case 4:
+                                            Console.WriteLine("Enter book name:");
+                                            string bookName = Console.ReadLine();
+                                            someStudent.TakeBook(bookName);
+                                            break;
+                                        case 5:
+                                            someStudent.GiveBackBook();
+                                            break;
+                                        case 6:
+                                            someStudent.PrintBook();
                                             break;
                                         case 0:
                                             exit = true;

@@ -20,6 +20,8 @@ namespace Task1
 
         private Queue<string> myTask;
 
+        private Stack<string> myBooks;
+
         public Student()
         {
         }
@@ -32,6 +34,7 @@ namespace Task1
             this.Group = group;
             this.Faculty = faculty;
             this.myTask = new Queue<string>();
+            this.myBooks = new Stack<string>();
         }
 
         public override string ToString()
@@ -53,6 +56,26 @@ namespace Task1
         public void PrintTask()
         {
             foreach (var item in myTask)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
+        public void TakeBook(string bookName)
+        {
+            myBooks.Push(bookName);
+            Console.WriteLine($"Student take book \"{bookName}\" from library.");
+        }
+
+        public void GiveBackBook()
+        {
+            var tmp = myBooks.Pop();
+            Console.WriteLine($" Student give back \"{tmp}\" to the library.");
+        }
+
+        public void PrintBook()
+        {
+            foreach (var item in myBooks)
             {
                 Console.WriteLine(item);
             }
