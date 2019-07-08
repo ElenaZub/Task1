@@ -13,7 +13,7 @@ namespace Task1
             //ConverMessage(EnterMessage());
             //PrintError();
             CountOfVowels();
-
+            
             Console.ReadKey();
         }
 
@@ -25,7 +25,6 @@ namespace Task1
             {
                 arrayWithUpp += arrayStr[i].Substring(0, 1).ToUpper() + arrayStr[i].Substring(1) + " ";
             }
-
             Console.WriteLine(arrayWithUpp);
         }
 
@@ -46,7 +45,6 @@ namespace Task1
                 if (str[i] > 'm')
                     error += 1;
             }
-
             Console.WriteLine($"The result is {error}/{str.Length}");
         }
 
@@ -66,7 +64,6 @@ namespace Task1
                         count += 1;
                 }
             }
-
             Console.WriteLine($"{str} - {count} vowels");
         }
     }
