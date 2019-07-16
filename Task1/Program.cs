@@ -13,11 +13,14 @@ namespace Task1
             Console.WriteLine("Enter amount of numbers in array:");
             int n = int.Parse(Console.ReadLine());
 
-            //int[] array = CreateRandomArray(n);
-            //PrintArray(array);
+            int[] array = CreateRandomArray(n);
+            PrintArray(array);
 
-            int[,] array2D = Create2DRandomArray(n + 1);
-            Print2DArray(array2D);
+            int[] withoutDublicates = DeleteDuplicates(array);
+            PrintArray(withoutDublicates);
+
+            //int[,] array2D = Create2DRandomArray(n + 1);
+            //Print2DArray(array2D);
 
             //Min(array);
             //Max(array);
@@ -59,10 +62,10 @@ namespace Task1
             //Print2DArray(Swap(array2D, 2, 4));
 
 
-            Console.WriteLine("Enter column:");
-            int column = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter column:");
+            //int column = int.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Sum of elements in column {column} is {SumInColumn(array2D, column)}");
+            //Console.WriteLine($"Sum of elements in column {column} is {SumInColumn(array2D, column)}");
         }
 
         public static int[] CreateRandomArray(int length)
@@ -71,7 +74,7 @@ namespace Task1
             int[] array = new int[length];
             for (int i = 0; i < array.Length; i++)
             {
-                array[i] = rand.Next(1, 100);
+                array[i] = rand.Next(-1, 5);
             }
             return array;
         }
@@ -312,6 +315,52 @@ namespace Task1
             }
 
             return sum;
+        }
+
+        private static int[] DeleteDuplicates(int[] array)
+        {
+            var arrayWithoutDuplicates = new int[array.Length];
+            arrayWithoutDuplicates[0] = array[0];
+            int position = 1;
+
+            var isDuplicate = false;
+            bool isNull = false;
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                for (int j = 0; j < position + 1; j++)
+                {
+                    if (array[i] == 0 && isNull == false)
+                    {
+                        isNull = true;
+                        position++;
+                    }
+
+                    if (array[i] == arrayWithoutDuplicates[j])
+                    {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+
+                if (!isDuplicate)
+                {
+                    arrayWithoutDuplicates[position] = array[i];
+                    position++;
+                }
+                isDuplicate = false; 
+            }
+
+            int[] resultArray = new int[position];
+            int tmp;
+
+            for (int i = 0; i < resultArray.Length; i++)
+            {
+                tmp = arrayWithoutDuplicates[i];
+                resultArray[i] = tmp;
+            }
+
+            return resultArray;
         }
     }
 }
