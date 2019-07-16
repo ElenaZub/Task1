@@ -25,13 +25,18 @@ namespace Task1
             //int[] reverseArray = MyReverse(array);
             //PrintArray(reverseArray);
 
-            Console.WriteLine("Enter index:");
-            int index = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter index:");
+            //int index = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter count:");
-            int count = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter count:");
+            //int count = int.Parse(Console.ReadLine());
 
-            PrintArray(SubArray(array, index, count));
+            //PrintArray(SubArray(array, index, count));
+
+            Console.WriteLine("Enter value:");
+            int value = int.Parse(Console.ReadLine());
+
+            PrintArray(ExtendArray(array, value));
         }
 
         public static int[] CreateRandomArray(int length)
@@ -168,6 +173,25 @@ namespace Task1
                     subArray[i] = 1;
             }
             return subArray;
+        }
+
+        public static int[] ExtendArray(int[] array, int value)
+        {
+            int[] extendedArray = new int[array.Length + 1];
+            int tmp;
+
+            for (int i = 0; i < extendedArray.Length; i++)
+            {
+                if (i < array.Length)
+                {
+                    tmp = array[i];
+                    extendedArray[i] = tmp;
+                }
+                else
+                    extendedArray[i] = value;
+            }
+
+            return extendedArray;
         }
     }
 }
