@@ -13,8 +13,11 @@ namespace Task1
             Console.WriteLine("Enter amount of numbers in array:");
             int n = int.Parse(Console.ReadLine());
 
-            int[] array = CreateRandomArray(n);
-            PrintArray(array);
+            //int[] array = CreateRandomArray(n);
+            //PrintArray(array);
+
+            int[,] array2D = Create2DRandomArray(n);
+            Print2DArray(array2D);
 
             //Min(array);
             //Max(array);
@@ -33,10 +36,24 @@ namespace Task1
 
             //PrintArray(SubArray(array, index, count));
 
+            //Console.WriteLine("Enter value:");
+            //int value = int.Parse(Console.ReadLine());
+
+            //PrintArray(ExtendArray(array, value));
+
             Console.WriteLine("Enter value:");
             int value = int.Parse(Console.ReadLine());
-
-            PrintArray(ExtendArray(array, value));
+            int count = RepeatCounter(array2D, value);
+            if (count == 0)
+            {
+                Console.WriteLine($"{value} doesn't repeat");
+            }
+            else if(count == 1)
+            {
+                Console.WriteLine($"{value} repeats {count} time");
+            }
+            else
+                Console.WriteLine($"{value} repeats {count} time");
         }
 
         public static int[] CreateRandomArray(int length)
@@ -50,6 +67,25 @@ namespace Task1
             return array;
         }
 
+        public static int[,] Create2DRandomArray(int length)
+        {
+            Random rand = new Random();
+            int[,] array = new int[length, length];
+
+            int uBound0 = array.GetUpperBound(0);
+            int uBound1 = array.GetUpperBound(1);
+
+            for (int i = 0; i < uBound0; i++)
+            {
+                for (int j = 0; j < uBound1; j++)
+                { 
+
+                    array[i, j] = rand.Next(1, 100);
+                }
+            }
+            return array;
+        }
+
         public static void PrintArray(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -57,6 +93,21 @@ namespace Task1
                 Console.Write($"{array[i]} ");
             }
             Console.WriteLine();
+        }
+
+        public static void Print2DArray(int[,] array)
+        {
+            int uBound0 = array.GetUpperBound(0);
+            int uBound1 = array.GetUpperBound(1);
+
+            for (int i = 0; i < uBound0; i++)
+            {
+                for (int j = 0; j < uBound1; j++)
+                {
+                    Console.Write($"{array[i, j]}  ");
+                }
+                Console.WriteLine();
+            }
         }
 
         public static void Min(int[] array)
@@ -192,6 +243,24 @@ namespace Task1
             }
 
             return extendedArray;
+        }
+
+        public static int RepeatCounter(int[,] array, int value)
+        {
+            int count = 0;
+            int uBound0 = array.GetUpperBound(0);
+            int uBound1 = array.GetUpperBound(1);
+
+            for (int i = 0; i < uBound0; i++)
+            {
+                for (int j = 0; j < uBound1; j++)
+                {
+                    if (array[i, j] == value)
+                        count++;
+                }
+            }
+
+            return count;
         }
     }
 }
