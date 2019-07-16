@@ -21,7 +21,9 @@ namespace Task1
             //Mean(array);
             //Odd(array);
             //IndexesOfElementsInRange(array);
-            ElementsMoreThanMean(array, Mean(array));
+            //ElementsMoreThanMean(array, Mean(array));
+            int[] reverseArray = MyReverse(array);
+            PrintArray(reverseArray);
         }
 
         public static int[] CreateRandomArray(int length)
@@ -122,6 +124,24 @@ namespace Task1
                 if (array[i] > mean)
                     Console.WriteLine(array[i]);        
             }
+        }
+
+        public static int[] MyReverse(int[] array)
+        {
+            int[] reverseArray = new int[array.Length];
+            int tmp;
+
+            for (int i = 0; i < reverseArray.Length; i++)
+            {
+                for (int j = array.Length - 1; j >= 0 ; j--)
+                {
+                    tmp = array[j];
+                    reverseArray[i] = tmp;
+                    i++;
+                }
+            }
+
+            return reverseArray;
         }
     }
 }
