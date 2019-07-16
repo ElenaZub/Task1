@@ -16,7 +16,7 @@ namespace Task1
             //int[] array = CreateRandomArray(n);
             //PrintArray(array);
 
-            int[,] array2D = Create2DRandomArray(n);
+            int[,] array2D = Create2DRandomArray(n + 1);
             Print2DArray(array2D);
 
             //Min(array);
@@ -41,19 +41,22 @@ namespace Task1
 
             //PrintArray(ExtendArray(array, value));
 
-            Console.WriteLine("Enter value:");
-            int value = int.Parse(Console.ReadLine());
-            int count = RepeatCounter(array2D, value);
-            if (count == 0)
-            {
-                Console.WriteLine($"{value} doesn't repeat");
-            }
-            else if(count == 1)
-            {
-                Console.WriteLine($"{value} repeats {count} time");
-            }
-            else
-                Console.WriteLine($"{value} repeats {count} time");
+            //Console.WriteLine("Enter value:");
+            //int value = int.Parse(Console.ReadLine());
+            //int count = RepeatCounter(array2D, value);
+            //if (count == 0)
+            //{
+            //    Console.WriteLine($"{value} doesn't repeat");
+            //}
+            //else if(count == 1)
+            //{
+            //    Console.WriteLine($"{value} repeats {count} time");
+            //}
+            //else
+            //    Console.WriteLine($"{value} repeats {count} time");
+
+            Console.WriteLine("Swaped 2D array:");
+            Print2DArray(Swap(array2D, 2, 4));
         }
 
         public static int[] CreateRandomArray(int length)
@@ -262,5 +265,29 @@ namespace Task1
 
             return count;
         }
+
+        public static int[,] Swap(int[,] array2D, int firstRow, int secondRow)
+        {
+            int uBound0 = array2D.GetUpperBound(0);
+            int uBound1 = array2D.GetUpperBound(1);
+            int tmp;
+
+            for (int i = 0; i < uBound0; i++)
+            {
+                for (int j = 0; j < uBound1; j++)
+                {
+                    if (i == firstRow - 1)
+                    {
+                        tmp = array2D[i, j];
+                        array2D[i, j] = array2D[secondRow - 1, j];
+                        array2D[secondRow - 1, j] = tmp;
+                    }
+                }
+            }
+
+            return array2D;
+        }
+
+
     }
 }
