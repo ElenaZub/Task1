@@ -55,8 +55,14 @@ namespace Task1
             //else
             //    Console.WriteLine($"{value} repeats {count} time");
 
-            Console.WriteLine("Swaped 2D array:");
-            Print2DArray(Swap(array2D, 2, 4));
+            //Console.WriteLine("Swaped 2D array:");
+            //Print2DArray(Swap(array2D, 2, 4));
+
+
+            Console.WriteLine("Enter column:");
+            int column = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Sum of elements in column {column} is {SumInColumn(array2D, column)}");
         }
 
         public static int[] CreateRandomArray(int length)
@@ -288,6 +294,24 @@ namespace Task1
             return array2D;
         }
 
+        public static int SumInColumn(int[,] array2D, int column)
+        {
+            int uBound0 = array2D.GetUpperBound(0);
+            int uBound1 = array2D.GetUpperBound(1);
+            int sum = 0;
 
+            for (int i = 0; i < uBound0; i++)
+            {
+                for (int j = 0; j < uBound1; j++)
+                {
+                    if (j == column - 1 )
+                    {
+                        sum += array2D[i, j];
+                    }
+                }
+            }
+
+            return sum;
+        }
     }
 }
