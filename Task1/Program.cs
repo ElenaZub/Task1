@@ -13,14 +13,15 @@ namespace Task1
             Console.WriteLine("Enter amount of numbers in array:");
             int n = int.Parse(Console.ReadLine());
 
-            int [] array = CreateRandomArray(n);
+            int[] array = CreateRandomArray(n);
             PrintArray(array);
 
             //Min(array);
             //Max(array);
             //Mean(array);
             //Odd(array);
-            IndexesOfElementsInRange(array);
+            //IndexesOfElementsInRange(array);
+            ElementsMoreThanMean(array, Mean(array));
         }
 
         public static int[] CreateRandomArray(int length)
@@ -39,7 +40,7 @@ namespace Task1
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write($"{array[i]} ");
-            }  
+            }
             Console.WriteLine();
         }
 
@@ -71,17 +72,16 @@ namespace Task1
             Console.WriteLine($"Max value is {max}");
         }
 
-        public static void Mean(int[] array)
+        public static double Mean(int[] array)
         {
             int sum = 0;
             for (int i = 0; i < array.Length; i++)
             {
                 sum += array[i];
-            }   
-            double mean = (double)sum / array.Length;
+            }
 
-            Console.WriteLine($"Sum of elements is {sum}");
-            Console.WriteLine($"Mean value is {mean}");
+            double mean = (double)sum / array.Length;
+            return mean;
         }
 
         public static void Odd(int[] array)
@@ -108,8 +108,19 @@ namespace Task1
             Console.WriteLine($"Indexes of elements that are more then {min} and less then {max}:");
             for (int i = 0; i < array.Length; i++)
             {
-                if(array[i] > min && array[i] < max)
+                if (array[i] > min && array[i] < max)
                     Console.WriteLine(i);
+            }
+        }
+
+        public static void ElementsMoreThanMean(int[] array, double mean)
+        {
+            Console.WriteLine($"Elements that are more then mean value = {mean}:");
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > mean)
+                    Console.WriteLine(array[i]);        
             }
         }
     }
