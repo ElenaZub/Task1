@@ -14,7 +14,8 @@ namespace Task1
             //Converter.Convert();
             //Bank.BankAction();
             //ATM.ValidatePin();
-            Triangle.SumOfOddNumbers();
+            //Triangle.SumOfOddNumbers();
+            LongString.Execute();
         }
     }
 }
