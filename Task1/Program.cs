@@ -12,7 +12,8 @@ namespace Task1
         {
             //Calculator.Calculate();
             //Converter.Convert();
-            Bank.BankAction();
+            //Bank.BankAction();
+            ATM.ValidatePin();
         }
     }
 }
