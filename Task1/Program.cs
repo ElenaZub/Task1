@@ -13,7 +13,8 @@ namespace Task1
             //Calculator.Calculate();
             //Converter.Convert();
             //Bank.BankAction();
-            ATM.ValidatePin();
+            //ATM.ValidatePin();
+            Triangle.SumOfOddNumbers();
         }
     }
 }
