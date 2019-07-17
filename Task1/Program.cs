@@ -10,7 +10,8 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            Calculator.Calculate();
+            //Calculator.Calculate();
+            Converter.Convert();
         }
     }
 }
