@@ -15,7 +15,8 @@ namespace Task1
             //Bank.BankAction();
             //ATM.ValidatePin();
             //Triangle.SumOfOddNumbers();
-            LongString.Execute();
+            //LongString.Execute();
+            CamelCase.Execute();
         }
     }
 }

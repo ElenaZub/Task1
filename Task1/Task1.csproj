@@ -46,6 +46,7 @@
     <Compile Include="ATM.cs" />
     <Compile Include="Bank.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="CamelCase.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="LongString.cs" />
     <Compile Include="Program.cs" />
