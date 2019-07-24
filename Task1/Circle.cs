@@ -18,7 +18,7 @@ namespace Task1
 
         public override void Draw()
         {
-            Console.WriteLine($"Circles has side {this.Radius} with centre ({this.PointX}, {this.PointX})");
+            Console.WriteLine($"You draw the circles with side {this.Radius} and centre ({this.PointX}, {this.PointX})");
         }
     }
 }
