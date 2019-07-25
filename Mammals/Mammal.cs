@@ -34,7 +34,6 @@ namespace Mammals
             }
             else
                 Console.WriteLine($"{this.GetType().Name} eats everything.");
-
         }
 
         public virtual void Move()
