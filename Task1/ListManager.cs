@@ -9,8 +9,7 @@ namespace Task1
     class ListManager
     {
         public void Execute()
-        {
-            
+        {           
 
         }
 
