@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoorState.cs" />
+    <Compile Include="Fridge.cs" />
+    <Compile Include="FridgeEventArgs.cs" />
+    <Compile Include="Manager.cs" />
+    <Compile Include="PowerState.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

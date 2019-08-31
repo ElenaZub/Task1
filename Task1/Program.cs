@@ -10,7 +10,12 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            
+            Fridge fridge = new Fridge();
+
+            Manager manager = new Manager(fridge);
+            manager.Execute();
+
+            Console.ReadKey();
         }
     }
 }
