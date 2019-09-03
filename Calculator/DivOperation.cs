@@ -25,7 +25,7 @@ namespace Calculator
         {
             if (this.SecondValue != 0)
             {
-                return (double)FirstValue / SecondValue;
+                return (double)this.FirstValue / this.SecondValue;
             }
             else
                 throw new DivideByZeroException();

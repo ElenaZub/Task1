@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class Square : Figure
+    public class Square : Figure
     {
         public int Side { get; set; }
 
@@ -18,7 +18,7 @@ namespace Task1
 
         public override void Draw()
         {
-            Console.WriteLine($"You draw square with side {Side} and centre ({this.PointX}, {this.PointX})");
+            Console.WriteLine($"You draw square with side {this.Side} and centre ({this.PointX}, {this.PointX})");
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Calculator
         public SumOperation(int firstValue, int secondValue) :
             base(firstValue, secondValue)
         { 
-}
+        }
 
         public override double Calculate()
         {

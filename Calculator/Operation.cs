@@ -22,7 +22,7 @@ namespace Calculator
 
         public override string ToString()
         {
-            return $"The calculation is performed using the {Action} operation.";
+            return $"The calculation is performed using the {this.Action} operation.";
         }
 
         public abstract double Calculate();

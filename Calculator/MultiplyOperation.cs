@@ -13,7 +13,7 @@ namespace Calculator
         {
             get
             {
-                return Action = "multiply";
+                return this.Action = "multiply";
             }
         }
 
