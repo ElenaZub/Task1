@@ -10,7 +10,10 @@ namespace Task1
     {
         static void Main(string[] args)
         {
-            
+            TrainScheduler train = new TrainScheduler();
+            train.Execute();
+
+            Console.ReadKey();
         }
     }
 }
