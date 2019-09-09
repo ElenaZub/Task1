@@ -6,53 +6,37 @@ using System.Threading.Tasks;
 
 namespace Task1
 {
-    class ListManager
+    public class ListManager
     {
+        private MyList<int> myList = new MyList<int>();
+
         public void Execute()
         {
-            MyList<int> list = new MyList<int>();
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine(list[i]);
-            }
+            myList.Add(1);
+            myList.Add(121);
+            myList.Add(4);
+            myList.Add(73);
+            myList.Add(61);
+            myList.Add(9);
 
-            list.Add(1);
-            list.Add(5);
-            list.Add(8);
+            Console.WriteLine(myList.ToString());
 
-            for (int i = 0; i < list.Count; i++)
-            {
-                Console.WriteLine(list[i]);
-            }
+            int value = 7;
 
-            if (list.Contains(1))
+            if (myList.Contains(value))
             {
-                Console.WriteLine("This item is contained in array");
+                Console.WriteLine($"List contains {value}");
             }
             else
             {
-                Console.WriteLine("This item is NOT contained in array");
+                Console.WriteLine($"List does not contain {value}");
             }
 
-            list.Clear();
-            Console.WriteLine($"Count after clearing: {list.Count}");
-        }
+            Console.WriteLine(myList.ToString());
 
-        public MyList<int> CreateList()
-        {
-            MyList<int> myList = new MyList<int>();
-            Random rand = new Random();
+            myList.Clear();
 
-            for (int i = 0; i < 10; i++)
-            {
-                myList.Add(rand.Next(100));
-            }
-            return myList;
-        }
-
-        public override string ToString()
-        {
-            return $"";
+            Console.WriteLine(myList.ToString());
         }
     }
 }

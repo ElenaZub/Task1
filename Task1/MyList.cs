@@ -33,10 +33,6 @@ namespace Task1
             {
                 return this.arrayT.Length;
             }
-            set
-            {
-                this.Count = value;
-            }
         }
 
 
@@ -68,18 +64,17 @@ namespace Task1
 
         public override string ToString()
         {
-            string info = String.Empty;
-            info += this.Count + ": ";
+            string list = string.Empty;
 
-            if (this.Count == 0)
-                return "List is empty";
-
-            for (int i = 0; i < this.arrayT.Length; i++)
+            for (int i = 0; i < this.Count; i++)
             {
-                info += " " + this.arrayT[i].ToString();
+                list += this.arrayT[i] + " ";
             }
 
-            return info;
+            if(this.Count == 0)
+                return "List is empty.";
+            else
+                return $"Size: {Count}, list: {list}";
         }
     }
 }
