@@ -30,9 +30,6 @@ namespace Task1
             myList.Clear();
 
             Console.WriteLine(myList.ToString());
-            var tmp = myList[carFirst.Name];
-            Console.WriteLine(tmp.ToString());
-
         }
 
         private void Contain(Car car)

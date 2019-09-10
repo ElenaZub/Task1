@@ -24,7 +24,7 @@ namespace Task1
 
                 for (int i = 0; i < this.Count; i++)
                 {
-                    if (this.carArray[i].Name == name)
+                    if (this.carArray[i].Name.Equals(name))
                     {
                         element = this.carArray[i];
                         break;
