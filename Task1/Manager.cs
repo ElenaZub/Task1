@@ -21,7 +21,6 @@ namespace Task1
                 new Employee("Vlad", "Stepanov", 24, "M", CompanyName.Intetics)
             };
 
-
             var orderedEmployees = employees.OrderBy(someEmployee => someEmployee.FirstName)
                      .ThenBy(someEmployee => someEmployee.LastName).ToList();
 
@@ -143,7 +142,11 @@ namespace Task1
                 new Employee("Stepan", "Pavlov", 24, "M", CompanyName.Intetics)
             };
 
-            var employeesWithDuplicates = firstEmployeesList.Concat(secondEmployeesList);
+            var employeesWithDuplicates = firstEmployeesList.Concat(secondEmployeesList).ToList();
+            Console.WriteLine("With duplicates:");
+            Display(employeesWithDuplicates);
+
+            var employeesWithoutDuplicates = firstEmployeesList.Union(secondEmployeesList).ToList();
             Console.WriteLine("With duplicates:");
             Display(employeesWithDuplicates);
         }
