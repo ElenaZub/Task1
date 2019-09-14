@@ -146,10 +146,6 @@ namespace Task1
             var employeesWithDuplicates = firstEmployeesList.Concat(secondEmployeesList);
             Console.WriteLine("With duplicates:");
             Display(employeesWithDuplicates);
-
-            var employeesWithoutDuplicates = firstEmployeesList.Union(secondEmployeesList).ToList();
-            Console.WriteLine("Without duplicates:");
-            Console.WriteLine(employeesWithoutDuplicates);
         }
     }
 }
