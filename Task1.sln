@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Struct", "Struct\Struct.csproj", "{82B8984C-47F1-4D2A-A74B-72EAA03C5267}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPrint", "ColorPrint\ColorPrint.csproj", "{624696C9-DA07-4C22-B5A5-FB0795269A84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolPupil", "SchoolPupil\SchoolPupil.csproj", "{4E70C408-B53A-4BB3-A10F-C5EC604C054F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{82B8984C-47F1-4D2A-A74B-72EAA03C5267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82B8984C-47F1-4D2A-A74B-72EAA03C5267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82B8984C-47F1-4D2A-A74B-72EAA03C5267}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624696C9-DA07-4C22-B5A5-FB0795269A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624696C9-DA07-4C22-B5A5-FB0795269A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624696C9-DA07-4C22-B5A5-FB0795269A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624696C9-DA07-4C22-B5A5-FB0795269A84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E70C408-B53A-4BB3-A10F-C5EC604C054F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E70C408-B53A-4BB3-A10F-C5EC604C054F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E70C408-B53A-4BB3-A10F-C5EC604C054F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E70C408-B53A-4BB3-A10F-C5EC604C054F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
